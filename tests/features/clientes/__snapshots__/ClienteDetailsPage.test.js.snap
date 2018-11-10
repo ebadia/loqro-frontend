@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ClienteDetailsPage /> renders correct 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ClienteDetailsPage
+    actions={
+        Object {
+            "addCliente": [Function],
+            "resetCurrentCliente": [Function],
+            "saveClienteDetails": [Function],
+          }
+    }
+    clientes={
+        Object {
+            "id": 1,
+          }
+    }
+    history={
+        Object {
+            "goBack": [Function],
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Header
+          as="h1"
+          className="clientes-cliente-details-page-header"
+          color="teal"
+>
+          <Button
+                    as="button"
+                    className="clientes-cliente-details-page-back"
+                    onClick={[Function]}
+                    role="button"
+          >
+                    <Icon
+                              as="i"
+                              name="arrow left"
+                    />
+          </Button>
+          Cliente
+</Header>,
+        <ReactFinalForm
+          className="clientes-cliente-details-page-form"
+          initialValues={undefined}
+          onSubmit={[Function]}
+          render={[Function]}
+          validate={[Function]}
+/>,
+      ],
+      "className": "clientes-cliente-details-page",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "as": "h1",
+          "children": Array [
+            <Button
+              as="button"
+              className="clientes-cliente-details-page-back"
+              onClick={[Function]}
+              role="button"
+>
+              <Icon
+                            as="i"
+                            name="arrow left"
+              />
+</Button>,
+            "Cliente",
+          ],
+          "className": "clientes-cliente-details-page-header",
+          "color": "teal",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "as": "button",
+              "children": <Icon
+                as="i"
+                name="arrow left"
+/>,
+              "className": "clientes-cliente-details-page-back",
+              "onClick": [Function],
+              "role": "button",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "as": "i",
+                "name": "arrow left",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          "Cliente",
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "className": "clientes-cliente-details-page-form",
+          "initialValues": undefined,
+          "onSubmit": [Function],
+          "render": [Function],
+          "validate": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Header
+            as="h1"
+            className="clientes-cliente-details-page-header"
+            color="teal"
+>
+            <Button
+                        as="button"
+                        className="clientes-cliente-details-page-back"
+                        onClick={[Function]}
+                        role="button"
+            >
+                        <Icon
+                                    as="i"
+                                    name="arrow left"
+                        />
+            </Button>
+            Cliente
+</Header>,
+          <ReactFinalForm
+            className="clientes-cliente-details-page-form"
+            initialValues={undefined}
+            onSubmit={[Function]}
+            render={[Function]}
+            validate={[Function]}
+/>,
+        ],
+        "className": "clientes-cliente-details-page",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "h1",
+            "children": Array [
+              <Button
+                as="button"
+                className="clientes-cliente-details-page-back"
+                onClick={[Function]}
+                role="button"
+>
+                <Icon
+                                as="i"
+                                name="arrow left"
+                />
+</Button>,
+              "Cliente",
+            ],
+            "className": "clientes-cliente-details-page-header",
+            "color": "teal",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "as": "button",
+                "children": <Icon
+                  as="i"
+                  name="arrow left"
+/>,
+                "className": "clientes-cliente-details-page-back",
+                "onClick": [Function],
+                "role": "button",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "as": "i",
+                  "name": "arrow left",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            "Cliente",
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "className": "clientes-cliente-details-page-form",
+            "initialValues": undefined,
+            "onSubmit": [Function],
+            "render": [Function],
+            "validate": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

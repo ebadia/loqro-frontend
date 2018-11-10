@@ -1,0 +1,69 @@
+@import '../../styles/mixins';
+
+.productos-user-form {
+  h1 {
+    text-align: center;
+    color: #222;
+  }
+
+  form {
+    max-width: 500px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      & > label {
+        color: #666;
+        width: 110px;
+        font-size: 0.8em;
+        line-height: 32px;
+        margin-bottom: 20px;
+        margin-top: 0px;
+      }
+      & > input,
+      & > select,
+      & > textarea {
+        flex: 1;
+        padding: 3px 0px;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      & > input[type='checkbox'] {
+        margin-top: 7px;
+      }
+      & > div {
+        margin: 0px;
+        & > label {
+          display: block;
+          & > input {
+            margin-right: 3px;
+          }
+        }
+      }
+    }
+    & > .buttons {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+    }
+    button {
+      margin: 15px 0px;
+    }
+    pre {
+      border: 1px solid #ccc;
+      background: rgba(0, 0, 0, 0.1);
+      box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+    }
+  }
+
+  #flat-button-file {
+    display: none;
+  }
+}
