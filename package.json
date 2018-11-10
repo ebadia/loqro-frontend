@@ -129,5 +129,8 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "description": "loqro created by Rekit."
+  "description": "loqro created by Rekit.",
+  "devDependencies": {
+    "eslint-plugin-cypress": "^2.1.2"
+  }
 }
