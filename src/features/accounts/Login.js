@@ -49,6 +49,7 @@ class SignIn extends React.Component {
                       placeholder="E-mail"
                       name="email"
                       onChange={this.onChange}
+                      data-test="email"
                     />
                     <Form.Input
                       fluid
@@ -58,9 +59,16 @@ class SignIn extends React.Component {
                       type="password"
                       name="password"
                       onChange={this.onChange}
+                      data-test="password"
                     />
 
-                    <Button color="teal" fluid size="large" onClick={() => onEntrar(this.state)}>
+                    <Button
+                      color="teal"
+                      fluid
+                      size="large"
+                      onClick={() => onEntrar(this.state)}
+                      data-test="loginButton"
+                    >
                       Login
                     </Button>
                   </Segment>

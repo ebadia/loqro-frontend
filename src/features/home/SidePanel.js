@@ -50,6 +50,9 @@ export class SidePanel extends Component {
             <Link to="/main/clientes">Clientes</Link>
           </li>
           <li>
+            <Link to="/main/pedidos">Pedidos</Link>
+          </li>
+          <li>
             <Button icon="log out" label="Salir" compact onClick={this.handleOpen} color="violet" />
             <Confirm
               open={open}

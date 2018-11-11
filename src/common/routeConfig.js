@@ -9,6 +9,7 @@ import productosRoute from '../features/productos/route';
 import accountsRoute from '../features/accounts/route';
 
 import { DefaultPage, Layout } from '../features/home';
+import pedidosRoute from '../features/pedidos/route';
 
 // retocado para pode poner el layout en primer plano de la APP
 
@@ -22,6 +23,7 @@ const childRoutes = [
   clientesRoute,
   productosRoute,
   accountsRoute,
+  pedidosRoute,
 ];
 
 const routes = [

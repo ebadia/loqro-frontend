@@ -7,6 +7,7 @@ import usersReducer from '../features/users/redux/reducer';
 import clientesReducer from '../features/clientes/redux/reducer';
 import productosReducer from '../features/productos/redux/reducer';
 import accountsReducer from '../features/accounts/redux/reducer';
+import pedidosReducer from '../features/pedidos/redux/reducer';
 
 // NOTE 1: DO NOT CHANGE the 'reducerMap' name and the declaration pattern.
 // This is used for Rekit cmds to register new features, remove features, etc.
@@ -22,6 +23,7 @@ const reducerMap = {
   clientes: clientesReducer,
   productos: productosReducer,
   accounts: accountsReducer,
+  pedidos: pedidosReducer,
 };
 
 export default combineReducers(reducerMap);
