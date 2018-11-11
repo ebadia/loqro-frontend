@@ -32,22 +32,8 @@ export function fetchList(args = {}) {
 
       doRequest.then(
         res => {
-          // const obj = res.data[0].map(item => {
-          //   /**
-          //    * marca los productos como activos
-          //    */
-          //   const activo =
-          //     (item.hasta === '' && moment().isSameOrAfter(moment(item.desde))) ||
-          //     (item.hasta !== '' &&
-          //       (moment().isSameOrAfter(moment(item.desde)) &&
-          //         moment().isSameOrBefore(moment(item.hasta)))) ||
-          //     false;
-          //   return { ...item, activo };
-          // });
-          // console.log('item :', obj);
           dispatch({
             type: FETCH_LIST_SUCCESS,
-            // data: [obj, res.data[1]],
             data: res.data,
           });
           resolve(res);

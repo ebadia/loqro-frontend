@@ -15,52 +15,52 @@ export default class TableComponent extends Component {
     const { datos, onEdit, onAdd, onDelete } = this.props;
     return (
       <div className="pedidos-table-component" data-test="pedidos-table">
-        <Segment>
-          <Table celled>
-            <Table.Header>
-              <Table.Row>
-                <Table.HeaderCell>Id</Table.HeaderCell>
-                <Table.HeaderCell>
-                  <Button
-                    onClick={() => onAdd()}
-                    className="add-pedido-button"
-                    data-test="add-pedido-button"
-                  >
-                    <Icon name="add" />
-                  </Button>
-                </Table.HeaderCell>
-              </Table.Row>
-            </Table.Header>
-            <Table.Body>
-              {datos &&
-                datos.map(row => {
-                  return (
-                    <Table.Row key={row.id}>
-                      <Table.Cell component="th" scope="row">
-                        {row.id}
-                      </Table.Cell>
-                      <Table.Cell>
-                        <Button
-                          aria-label="Edit"
-                          onClick={() => onEdit(row.id)}
-                          data-test="edit-pedido-button"
-                        >
-                          <Icon name="pencil" />
-                        </Button>
-                        <Button
-                          aria-label="Delete"
-                          onClick={() => onDelete(row.id)}
-                          data-test="delete-pedido-button"
-                        >
-                          <Icon name="trash" />
-                        </Button>
-                      </Table.Cell>
-                    </Table.Row>
-                  );
-                })}
-            </Table.Body>
-          </Table>
-        </Segment>
+        {/* <Segment> */}
+        <Table celled>
+          <Table.Header>
+            <Table.Row>
+              <Table.HeaderCell>Id</Table.HeaderCell>
+              <Table.HeaderCell>
+                <Button
+                  onClick={() => onAdd()}
+                  className="add-pedido-button"
+                  data-test="add-pedido-button"
+                >
+                  <Icon name="add" />
+                </Button>
+              </Table.HeaderCell>
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
+            {datos &&
+              datos.map(row => {
+                return (
+                  <Table.Row key={row.id} data-test="table-row">
+                    <Table.Cell component="th" scope="row">
+                      {row.id}
+                    </Table.Cell>
+                    <Table.Cell>
+                      <Button
+                        aria-label="Edit"
+                        onClick={() => onEdit(row.id)}
+                        data-test="edit-pedido-button"
+                      >
+                        <Icon name="pencil" />
+                      </Button>
+                      <Button
+                        aria-label="Delete"
+                        onClick={() => onDelete(row.id)}
+                        data-test="delete-pedido-button"
+                      >
+                        <Icon name="trash" />
+                      </Button>
+                    </Table.Cell>
+                  </Table.Row>
+                );
+              })}
+          </Table.Body>
+        </Table>
+        {/* </Segment> */}
       </div>
     );
   }
