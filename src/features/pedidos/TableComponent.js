@@ -11,6 +11,10 @@ export default class TableComponent extends Component {
     onDelete: PropTypes.func,
   };
 
+  static defaultProps = {
+    datos: [],
+  };
+
   render() {
     const { datos, onEdit, onAdd, onDelete } = this.props;
     return (

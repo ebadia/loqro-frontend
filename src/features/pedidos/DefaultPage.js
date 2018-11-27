@@ -14,16 +14,47 @@ export class DefaultPage extends Component {
   };
 
   state = {
-    pedidos: [],
+    lista: [],
+    current: null,
+    open: false,
   };
 
   async componentDidMount() {
-    const res = await Axios.get('http://localhost:1234/api/pedidos');
-    this.setState({ pedidos: res.data });
+    try {
+      const res = await Axios.get('http://localhost:1234/api/pedidos');
+      this.setState({ current: res.data });
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
+
+  async handleEdit(id) {
+    if (id) {
+      const res = await Axios.get(`http://localhost:1234/api/pedidos/${id}`);
+      this.setState({ current: res.data });
+    }
+  }
+
+  handleDelete(id) {
+    this.setState({ open: true });
+  }
+
+  handleAdd() {
+    console.log('add :');
+  }
+
+  handleCancel() {
+    this.setState({ open: false, current: null });
+  }
+
+  async handleConfirm() {
+    const { current } = this.state;
+    const res = await Axios.delete(`http://localhost:1234/api/pedidos/${current.id}`);
+    this.setState({ open: false, current: null });
   }
 
   render() {
-    const { pedidos } = this.state;
+    const { lista, open } = this.state;
     return (
       <div className="pedidos-default-page">
         <React.Fragment>
@@ -31,8 +62,22 @@ export class DefaultPage extends Component {
             <Header as="h1" color="teal">
               Lista de pedidos
             </Header>
-            <TableComponent datos={pedidos} />
+            <TableComponent
+              datos={lista}
+              onAdd={() => this.handleAdd()}
+              onEdit={id => this.handleEdit(id)}
+              onDelete={id => this.handleDelete(id)}
+              data-test="table-component"
+            />
           </div>
+          <Confirm
+            open={open}
+            cancelButton="No"
+            confirmButton="Si, adelante"
+            content="¿Borrar el producto?"
+            onCancel={() => this.handleCancel()}
+            onConfirm={() => this.handleConfirm()}
+          />
         </React.Fragment>
       </div>
     );

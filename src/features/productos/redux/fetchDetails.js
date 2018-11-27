@@ -33,7 +33,8 @@ export function fetchDetails(args = {}) {
           // eliminar los null del retorno de backend para el formulario Formik
           const obj = {};
           Object.keys(entidad).map(
-            item => (entidad[item] ? (obj[item] = entidad[item]) : (obj[item] = '')),
+            item =>
+              entidad[item] || entidad[item] === 0 ? (obj[item] = entidad[item]) : (obj[item] = ''),
           );
           // calcular si el producto esta activo
           const final = entidad.hasta;

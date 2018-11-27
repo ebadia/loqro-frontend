@@ -13,7 +13,6 @@ export function marcaProductosActivos() {
 export function reducer(state, action) {
   switch (action.type) {
     case PRODUCTOS_MARCA_PRODUCTOS_ACTIVOS:
-      console.log('state :', state);
       /**
        * marca los productos como activos
        */

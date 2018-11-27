@@ -1,0 +1,48 @@
+{
+  "pedidos": [
+    {
+      "id": 1,
+      "fecha": "2018-11-01",
+      "usuario": {
+        "id": 8,
+        "firstName": "peter",
+        "lastName": "stone",
+        "mobile": "",
+        "phone": "",
+        "sex": "",
+        "address": "",
+        "city": "",
+        "cp": "",
+        "province": "",
+        "image": "",
+        "idioma": "ca",
+        "role": "User",
+        "account": "",
+        "cliente": ""
+      },
+      "producto": {
+        "id": 2,
+        "nombre": "Producto 2",
+        "descripcion": "",
+        "imagen": "http://res.cloudinary.com/favolist/image/upload/v1541334482/loqro/better-than.png.png",
+        "precio": 120,
+        "oferta": 80,
+        "desde": "2018-11-01",
+        "hasta": "2018-11-30",
+        "activo": true
+      }
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    }
+  ]
+}

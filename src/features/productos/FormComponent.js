@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Field } from 'react-final-form';
 import { Button, Segment, Divider, Loader, Item, Dimmer, Grid } from 'semantic-ui-react';
 import {
@@ -10,6 +11,16 @@ import {
 import * as QRCode from 'qrcode.react';
 
 class FormComponent extends React.Component {
+  static propTypes = {
+    productos: PropTypes.object.isRequired,
+    handleDeleteImage: PropTypes.func.isRequired,
+    handleFile: PropTypes.func.isRequired,
+    handleSubmit: PropTypes.func.isRequired,
+    submitting: PropTypes.bool.isRequired,
+    pristine: PropTypes.bool.isRequired,
+    values: PropTypes.object.isRequired,
+  };
+
   render() {
     const {
       handleDeleteImage,
@@ -21,8 +32,6 @@ class FormComponent extends React.Component {
     } = this.props;
 
     const { uploadProductImagePending } = this.props.productos;
-
-    console.log('this.props :', uploadProductImagePending);
 
     return (
       <Segment>

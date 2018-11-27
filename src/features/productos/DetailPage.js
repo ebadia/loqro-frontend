@@ -48,8 +48,6 @@ export class DetailPage extends Component {
     const { saveDetails, add } = this.props.actions;
     const { current } = this.props.productos;
 
-    console.log('values FROM', JSON.stringify(values, 0, 2));
-
     if (current) {
       if (values.activo === '') {
         values.activo = false;
@@ -60,11 +58,6 @@ export class DetailPage extends Component {
       await add(values);
       this.handleBack();
     }
-
-    //process form submission here
-    //done submitting, set submitting to false
-    // setSubmitting(false);
-    // return;
   };
 
   handleBack() {
@@ -85,7 +78,6 @@ export class DetailPage extends Component {
   };
 
   handleDeleteImage = () => {
-    console.log('handle delete image here........... :');
     const { deleteProductImage } = this.props.actions;
     const { current } = this.props.productos;
     deleteProductImage({ id: current.id });

@@ -1,6 +1,6 @@
 {
   "port": 1234,
-  "watch": false,
+  "watch": true,
   "static": "./build",
   "routes": "./routes.json"
 }

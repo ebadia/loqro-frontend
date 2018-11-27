@@ -4,7 +4,7 @@ import { Icon, Segment, Table, Button } from 'semantic-ui-react';
 
 const UsersTable = ({ clientes, onEdit, onAdd, onDelete }) => {
   return (
-    <Segment className="clientes-clientes-table">
+    <div className="clientes-clientes-table" data-test="clientes-table">
       <Table>
         <Table.Header>
           <Table.Row>
@@ -44,7 +44,7 @@ const UsersTable = ({ clientes, onEdit, onAdd, onDelete }) => {
           })}
         </Table.Body>
       </Table>
-    </Segment>
+    </div>
   );
 };
 
