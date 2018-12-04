@@ -25,7 +25,7 @@ export function fetchClientesList(args = {}) {
       // args.error here is only for test coverage purpose.
       axios.defaults.headers.common['Authorization'] = localStorage.getItem('token');
 
-      const doRequest = axios.get('http://localhost:3400/api/v1/clientes');
+      const doRequest = axios.get('${process.env.REACT_APP_API_URL}/api/v1/clientes');
       doRequest.then(
         (res) => {
           dispatch({

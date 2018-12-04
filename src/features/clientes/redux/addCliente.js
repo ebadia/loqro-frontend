@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 
 import {
   CLIENTES_ADD_CLIENTE_BEGIN,
@@ -10,7 +10,8 @@ import {
 // Rekit uses redux-thunk for async actions by default: https://github.com/gaearon/redux-thunk
 // If you prefer redux-saga, you can use rekit-plugin-redux-saga: https://github.com/supnate/rekit-plugin-redux-saga
 export function addCliente(args = {}) {
-  return (dispatch) => { // optionally you can have getState as the second argument
+  return dispatch => {
+    // optionally you can have getState as the second argument
     dispatch({
       type: CLIENTES_ADD_CLIENTE_BEGIN,
     });
@@ -24,10 +25,10 @@ export function addCliente(args = {}) {
       // See the real-word example at:  https://github.com/supnate/rekit/blob/master/src/features/home/redux/fetchRedditReactjsList.js
       // args.error here is only for test coverage purpose.
       axios.defaults.headers.common['Authorization'] = localStorage.getItem('token');
-      const doRequest = axios.post(`http://localhost:3400/api/v1/clientes`, args);
+      const doRequest = axios.post(`${process.env.REACT_APP_API_URL}/clientes`, args);
 
       doRequest.then(
-        (res) => {
+        res => {
           dispatch({
             type: CLIENTES_ADD_CLIENTE_SUCCESS,
             data: res.data,
@@ -35,7 +36,7 @@ export function addCliente(args = {}) {
           resolve(res);
         },
         // Use rejectHandler as the second argument so that render errors won't be caught.
-        (err) => {
+        err => {
           dispatch({
             type: CLIENTES_ADD_CLIENTE_FAILURE,
             data: { error: err },
