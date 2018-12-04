@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 
 import {
   CLIENTES_FETCH_CLIENTES_LIST_BEGIN,
@@ -10,7 +10,8 @@ import {
 // Rekit uses redux-thunk for async actions by default: https://github.com/gaearon/redux-thunk
 // If you prefer redux-saga, you can use rekit-plugin-redux-saga: https://github.com/supnate/rekit-plugin-redux-saga
 export function fetchClientesList(args = {}) {
-  return (dispatch) => { // optionally you can have getState as the second argument
+  return dispatch => {
+    // optionally you can have getState as the second argument
     dispatch({
       type: CLIENTES_FETCH_CLIENTES_LIST_BEGIN,
     });
@@ -25,9 +26,9 @@ export function fetchClientesList(args = {}) {
       // args.error here is only for test coverage purpose.
       axios.defaults.headers.common['Authorization'] = localStorage.getItem('token');
 
-      const doRequest = axios.get('${process.env.REACT_APP_API_URL}/api/v1/clientes');
+      const doRequest = axios.get(`${process.env.REACT_APP_API_URL}/api/v1/clientes`);
       doRequest.then(
-        (res) => {
+        res => {
           dispatch({
             type: CLIENTES_FETCH_CLIENTES_LIST_SUCCESS,
             data: res.data,
@@ -35,7 +36,7 @@ export function fetchClientesList(args = {}) {
           resolve(res);
         },
         // Use rejectHandler as the second argument so that render errors won't be caught.
-        (err) => {
+        err => {
           dispatch({
             type: CLIENTES_FETCH_CLIENTES_LIST_FAILURE,
             data: { error: err },
@@ -74,7 +75,7 @@ export function reducer(state, action) {
         fetchClientesListPending: false,
         fetchClientesListError: null,
         clientesList: action.data[0],
-        clientesCount: action.data[1]
+        clientesCount: action.data[1],
       };
 
     case CLIENTES_FETCH_CLIENTES_LIST_FAILURE:
