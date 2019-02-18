@@ -6,7 +6,7 @@ import * as actions from './redux/actions';
 import { Form } from 'react-final-form';
 
 import AccountsForm from './AccountsForm';
-import { Header, Button, Icon } from 'semantic-ui-react';
+import { Header } from 'semantic-ui-react';
 import moment from 'moment';
 moment.locale('es');
 
